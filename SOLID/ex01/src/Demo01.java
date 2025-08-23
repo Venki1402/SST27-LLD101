@@ -1,7 +1,9 @@
 
-
 public class Demo01 {
     public static void main(String[] args) {
-        new OrderService().checkout("a@shop.com", 100.0);
+        MessageClient mc = new EmailClient();
+        Tax tx = new Tax();
+        OrderService os = new OrderService(mc, tx);
+        os.checkout("a@shop.com", 100.0);
     }
 }
