@@ -1,4 +1,9 @@
 public class Payment {
-    String provider; double amount;
-    Payment(String p, double a){ provider=p; amount=a; }
+    PaymentType provider;
+    double amount;
+
+    Payment(PaymentType p, double a) {
+        provider = p;
+        amount = a;
+    }
 }
