@@ -1,7 +1,8 @@
 package com.example.orders;
 
 public final class PricingRules {
-    private PricingRules() {}
+    private PricingRules() {
+    }
 
     public static boolean isValidEmail(String email) {
         return email != null && email.contains("@");
