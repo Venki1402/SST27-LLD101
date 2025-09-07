@@ -16,6 +16,14 @@ public class CsvProfileImporter implements ProfileImporter {
     @Override
     public int importFrom(Path csvFile) {
         List<String[]> profiles = naiveCsvReader.read(csvFile);
+        for (String[] row : profiles) {
+            if (row.length >= 3) {
+                String id = row[0];
+                String email = row[1];
+                String displayName = row[2];
+                profileService.createProfile(id, email, displayName);
+            }
+        }
         return profiles.size();
     }
 
