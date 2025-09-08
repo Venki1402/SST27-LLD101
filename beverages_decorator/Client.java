@@ -9,6 +9,9 @@ public class Client {
 		coffee = new Latte(coffee);
 		System.out.println("Coffee + Latte");
 		System.out.println(coffee.cost());
+		coffee = new CokeDecorator(coffee);
+		System.out.println("Coffee + Latte + Coke");
+		System.out.println(coffee.cost());
 	}
 
 }
